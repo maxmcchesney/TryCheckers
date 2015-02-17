@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TryCheckers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,66 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chile-snow" translatesAutoresizingMaskIntoConstraints="NO" id="yMS-qS-IVf">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TQA-Me-ciU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qBN-d1-CA2">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-Gr-MLu" customClass="BoardView" customModule="TryCheckers" customModuleProvider="target">
+                                            <rect key="frame" x="145" y="145" width="310" height="310"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="310" id="AZb-Fe-eIn"/>
+                                                <constraint firstAttribute="width" secondItem="Sbd-Gr-MLu" secondAttribute="height" multiplier="1:1" id="WHd-8e-sQ8"/>
+                                                <constraint firstAttribute="height" constant="310" id="c9W-dr-y4x"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="AZb-Fe-eIn"/>
+                                                    <exclude reference="c9W-dr-y4x"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Sbd-Gr-MLu" firstAttribute="leading" secondItem="qBN-d1-CA2" secondAttribute="leading" constant="15" id="55m-TN-Na7"/>
+                                        <constraint firstAttribute="centerX" secondItem="Sbd-Gr-MLu" secondAttribute="centerX" id="GBt-iS-RPO"/>
+                                        <constraint firstAttribute="trailing" secondItem="Sbd-Gr-MLu" secondAttribute="trailing" constant="15" id="IsP-uX-dGd"/>
+                                        <constraint firstAttribute="centerY" secondItem="Sbd-Gr-MLu" secondAttribute="centerY" id="nUV-sP-UaW"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="TQA-Me-ciU" secondAttribute="bottom" id="370-Nx-Mfv"/>
+                            <constraint firstItem="TQA-Me-ciU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="DaF-bv-3JA"/>
+                            <constraint firstItem="TQA-Me-ciU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Hje-eZ-tR8"/>
+                            <constraint firstAttribute="trailing" secondItem="yMS-qS-IVf" secondAttribute="trailing" id="Kjs-Ep-SaX"/>
+                            <constraint firstItem="yMS-qS-IVf" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="LAp-U4-vWd"/>
+                            <constraint firstItem="TQA-Me-ciU" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="ZN2-pB-UVA"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yMS-qS-IVf" secondAttribute="bottom" id="cjG-15-smj"/>
+                            <constraint firstItem="yMS-qS-IVf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gik-oQ-3Ef"/>
+                            <constraint firstAttribute="trailing" secondItem="TQA-Me-ciU" secondAttribute="trailing" id="suu-XR-9lB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Hje-eZ-tR8"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="chile-snow" width="457" height="600"/>
+    </resources>
 </document>

@@ -13,6 +13,8 @@
 		D8CD9A491A92862000865608 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8CD9A481A92862000865608 /* Images.xcassets */; };
 		D8CD9A4C1A92862000865608 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CD9A4A1A92862000865608 /* LaunchScreen.xib */; };
 		D8CD9A581A92862000865608 /* TryCheckersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD9A571A92862000865608 /* TryCheckersTests.swift */; };
+		D8CD9A651A9289F400865608 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD9A641A9289F400865608 /* BoardView.swift */; };
+		D8CD9A671A928A2000865608 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD9A661A928A2000865608 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		D8CD9A511A92862000865608 /* TryCheckersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryCheckersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8CD9A561A92862000865608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8CD9A571A92862000865608 /* TryCheckersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryCheckersTests.swift; sourceTree = "<group>"; };
+		D8CD9A641A9289F400865608 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		D8CD9A661A928A2000865608 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +81,11 @@
 		D8CD9A3E1A92862000865608 /* TryCheckers */ = {
 			isa = PBXGroup;
 			children = (
-				D8CD9A411A92862000865608 /* AppDelegate.swift */,
-				D8CD9A431A92862000865608 /* ViewController.swift */,
+				D8CD9A631A9289D500865608 /* Controllers */,
+				D8CD9A621A9289CE00865608 /* Views */,
+				D8CD9A611A9289C800865608 /* Models */,
 				D8CD9A451A92862000865608 /* Main.storyboard */,
-				D8CD9A481A92862000865608 /* Images.xcassets */,
-				D8CD9A4A1A92862000865608 /* LaunchScreen.xib */,
+				D8CD9A661A928A2000865608 /* Constants.swift */,
 				D8CD9A3F1A92862000865608 /* Supporting Files */,
 			);
 			path = TryCheckers;
@@ -90,6 +94,9 @@
 		D8CD9A3F1A92862000865608 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D8CD9A411A92862000865608 /* AppDelegate.swift */,
+				D8CD9A481A92862000865608 /* Images.xcassets */,
+				D8CD9A4A1A92862000865608 /* LaunchScreen.xib */,
 				D8CD9A401A92862000865608 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +117,29 @@
 				D8CD9A561A92862000865608 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8CD9A611A9289C800865608 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D8CD9A621A9289CE00865608 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D8CD9A641A9289F400865608 /* BoardView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D8CD9A631A9289D500865608 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8CD9A431A92862000865608 /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +243,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8CD9A441A92862000865608 /* ViewController.swift in Sources */,
+				D8CD9A651A9289F400865608 /* BoardView.swift in Sources */,
 				D8CD9A421A92862000865608 /* AppDelegate.swift in Sources */,
+				D8CD9A671A928A2000865608 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
